@@ -1,0 +1,8 @@
+Strawberry          0.99      strawberry.jpg
+Lettuce             1.61      romainelettuce.jpg
+Pomegranate         2.34      pomegranate.jpg
+Orange              1.25      orange.jpg
+Apple               1.16      apple.jpg
+White Grape         1.88      whitegrape.jpg
+Cherry              1.89      cherry.jpg
+Tomato              3.25      cherrytomato.jpg

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS120-BeatlesForever", "CS120-BeatlesForever\CS120-BeatlesForever.vcxproj", "{AF8969B3-A5A3-424E-BD3E-DD1D99CD4591}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS120-Data", "CS120-Data\CS120-Data.vcxproj", "{66E748C3-B023-43CD-A643-B52C4DA9CC06}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS120BF-sqlite", "..\CS120BF-sqlite\CS120BF-sqlite\CS120BF-sqlite.vcxproj", "{C53D860F-A869-4086-864B-6FABCF3B576E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF8969B3-A5A3-424E-BD3E-DD1D99CD4591}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF8969B3-A5A3-424E-BD3E-DD1D99CD4591}.Debug|Win32.Build.0 = Debug|Win32
+		{AF8969B3-A5A3-424E-BD3E-DD1D99CD4591}.Release|Win32.ActiveCfg = Release|Win32
+		{AF8969B3-A5A3-424E-BD3E-DD1D99CD4591}.Release|Win32.Build.0 = Release|Win32
+		{66E748C3-B023-43CD-A643-B52C4DA9CC06}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66E748C3-B023-43CD-A643-B52C4DA9CC06}.Debug|Win32.Build.0 = Debug|Win32
+		{66E748C3-B023-43CD-A643-B52C4DA9CC06}.Release|Win32.ActiveCfg = Release|Win32
+		{66E748C3-B023-43CD-A643-B52C4DA9CC06}.Release|Win32.Build.0 = Release|Win32
+		{C53D860F-A869-4086-864B-6FABCF3B576E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C53D860F-A869-4086-864B-6FABCF3B576E}.Debug|Win32.Build.0 = Debug|Win32
+		{C53D860F-A869-4086-864B-6FABCF3B576E}.Release|Win32.ActiveCfg = Release|Win32
+		{C53D860F-A869-4086-864B-6FABCF3B576E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
