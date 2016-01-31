@@ -658,9 +658,9 @@ namespace WindowsFormsApplication2012 {
 			//
 		}
 
-	public: System::Void ReadListBoxFromFile()
+	public: System::Void ReadListBoxFromFile()   //deprecated! see MyData.h
 		 {				 //---create reader and load listbox
-			 					  //01234567890123456789012345678901234567890123456789
+			 					    //01234567890123456789012345678901234567890123456789
 			 //lbProduce->Items->Add("Strawberry          0.99      strawberry.jpg");
 			 //lbProduce->Items->Add("Lettuce             1.61      romainelettuce.jpg");
 			 //lbProduce->Items->Add("Pomegranate         2.34      pomegranate.jpg");
@@ -710,13 +710,12 @@ namespace WindowsFormsApplication2012 {
 			//										 //Stream^ streamB =gcnew Stream("ProduceListBox.txt",SreamMode::OpenOrCreate,FileAccess::ReadWrite,FileShare::ReadWrite );			 //StreamReader^ readerB =gcnew StreamReader(			 //fileStream->Read(readBuf,0,43)			 //fileStream->Write( uniEncoding->GetBytes( strStrucNameA), 0, byteCount );            //fileStream->Flush();			//
 		}
 
-	public: System::Void ReadListBoxFromDB()
+	public: System::Void ReadListBoxFromDB()	//deprecated! see MyData.h
 			{
-				OpenDBConnection(); ReadTable("Products", "productName, productId, unitPrice ,productImage");		
-
+				OpenDBConnection(); ReadTable("Products", "productName, productId, unitPrice ,productImage");					
 			}
 
-	public: System::Void OpenDBConnection()
+	public: System::Void OpenDBConnection()	//deprecated! see MyData.h
 			{
 				try
 					{
@@ -731,7 +730,7 @@ namespace WindowsFormsApplication2012 {
 					}
  			}
 
-	public: System::Void ReadTable(String^ TableName, String^ FieldNames)		   
+	public: System::Void ReadTable(String^ TableName, String^ FieldNames)	//deprecated! see MyData.h		   
 			{
 				String ^strField, ^strField0, ^strField1, ^strField2, ^strField3, ^strLine;
 				// Display Table
@@ -1011,7 +1010,7 @@ public static List<language> GetLanguages(int langId)
 					 lblMessage->BackColor = defaultLblBackColor;    
 					 lbProduce->BackColor = defaultTxtBackColor;
 					 errorProvider1->SetError( this->lbProduce, String::Empty);
-					 lblMessage->Text = "";
+					 lblMessage->Text += "";
 				 }
 
 		 }
