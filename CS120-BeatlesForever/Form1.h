@@ -1,5 +1,5 @@
 #pragma once
-
+#include "MyData.h"
 namespace WindowsFormsApplication2012 {
 
 	using namespace System;
@@ -17,7 +17,7 @@ namespace WindowsFormsApplication2012 {
 	using namespace System::Data::SQLite;
 	using namespace System::Data::SQLite::Linq;
 	using namespace System::Data::SQLite::Generic;
-	
+//using namespace m	
 	/// <summary>
 	/// Summary for Form1
 	/// </summary>
@@ -553,18 +553,20 @@ namespace WindowsFormsApplication2012 {
 /*  */
 
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) 
-		 {
-			 					  //01234567890123456789012345678901234567890123456789
-			 //lbProduce->Items->Add("Strawberry          0.99      strawberry.jpg");
-			 //lbProduce->Items->Add("Lettuce             1.61      romainelettuce.jpg");
-			 //lbProduce->Items->Add("Pomegranate         2.34      pomegranate.jpg");
-			 //lbProduce->Items->Add("Orange              1.25      orange.jpg");
-			 //lbProduce->Items->Add("Apple               1.16      apple.jpg");
-			 //lbProduce->Items->Add("White Grape         1.88      whitegrape.jpg");
-			 //lbProduce->Items->Add("Cherry              1.89      cherry.jpg");
-			 //lbProduce->Items->Add("Tomato              3.25      cherrytomato.jpg");
-			 // ReadListBoxFromFile();
-			 ReadListBoxFromDB();
+		 {			 // ReadListBoxFromFile();
+			 StringCollection^ sc = gcnew StringCollection();  
+			 bool lblMessageFlag = false;
+			 MyData^ ReadFromDB = gcnew MyData();
+			 sc = ReadFromDB->ReadListBoxFromDB();			 //ReadListBoxFromDB();
+			 //get strings From ReadListBoxFromDB; Separate lblProduce From lblMessage->Text
+			 
+			 StringEnumerator^ myEnumerator = sc->GetEnumerator();
+				while ( myEnumerator->MoveNext() )
+				{
+					if(lblMessageFlag || myEnumerator->Current->ToString() == "****End of Products!****")
+					{lblMessageFlag=true;	lblMessage->Text += myEnumerator->Current->ToString() + "\n";}
+					else	{				lbProduce->Items->Add(myEnumerator->Current->ToString() );   }
+				}
 			 lbProduce->Sorted = true;
 			 txtQuantity->Text = "1";
 			 picHead->Load("supermarketv1.jpg");
@@ -629,13 +631,13 @@ namespace WindowsFormsApplication2012 {
 		{
 				 total += subTotalAmt;
 				 txtTotal->Text = total.ToString("C2");
-				 lblMessage->Text = "Thank You, " + txtFirstName->Text + " " + txtLastName->Text + " for your order of " + txtQuantity->Text + " " + txtItem->Text + 
-					 "(s). Your Sub-Total is " + txtSubTotal->Text + ", and your total is " + txtTotal->Text + ".";  
+				 lblMessage->Text += "Thank You, " + txtFirstName->Text + " " + txtLastName->Text + " for your order of " + txtQuantity->Text + " " + txtItem->Text + 
+					 "(s). Your Sub-Total is " + txtSubTotal->Text + ", and your total is " + txtTotal->Text + ".\r";  
 		}
 
 	public: System::Void FillStruc()
 		{
-			 int arrIx= arrayIndex;				//MyArray =  gcnew array<strucProduce ^>(1000);int indx=0;
+			 int arrIx= arrayIndex;			     	//MyArray =  gcnew array<strucProduce ^>(1000);int indx=0;
 			 MyArray[arrIx] = gcnew strucProduce;		 					MyArray[arrIx]->iProductID = Convert::ToInt32(txtProductID->Text->Trim());
 			 MyArray[arrIx]->sFirstName = txtFirstName->Text->Trim();		MyArray[arrIx]->SLastName = txtLastName->Text->Trim();
 			 MyArray[arrIx]->sItem = txtItem->Text->Trim();					MyArray[arrIx]->sTaxRate = tax.ToString("C2");				
@@ -658,6 +660,15 @@ namespace WindowsFormsApplication2012 {
 
 	public: System::Void ReadListBoxFromFile()
 		 {				 //---create reader and load listbox
+			 					  //01234567890123456789012345678901234567890123456789
+			 //lbProduce->Items->Add("Strawberry          0.99      strawberry.jpg");
+			 //lbProduce->Items->Add("Lettuce             1.61      romainelettuce.jpg");
+			 //lbProduce->Items->Add("Pomegranate         2.34      pomegranate.jpg");
+			 //lbProduce->Items->Add("Orange              1.25      orange.jpg");
+			 //lbProduce->Items->Add("Apple               1.16      apple.jpg");
+			 //lbProduce->Items->Add("White Grape         1.88      whitegrape.jpg");
+			 //lbProduce->Items->Add("Cherry              1.89      cherry.jpg");
+			 //lbProduce->Items->Add("Tomato              3.25      cherrytomato.jpg");
 				 StreamReader^ myReader;
 				 try
 				 {
@@ -874,13 +885,14 @@ public static List<language> GetLanguages(int langId)
 							StreamReader^ reader = gcnew StreamReader(isoStream);
 							lblMessage->Text += "Reading contents:";
 							lblMessage->Text += reader->ReadToEnd();
+							lblMessage->Text += "\r";
 						}
 		            else
 						{			 /* try	{  int* myarray= new int[1000];	} catch (exception& e)	  {    cout << "Standard exception: " << e.what() << endl;  }  return 0;} */	
 							IsolatedStorageFileStream^ isoStream = gcnew IsolatedStorageFileStream(isoFileName, FileMode::CreateNew, isoStore);
 							StreamWriter^ writer = gcnew StreamWriter(isoStream);
 		                    writer->WriteLine("Hello Isolated Storage");
-		                    lblMessage->Text += "You have written to the file.";
+		                    lblMessage->Text += "You have written to the file. \r";
 		                }
 				  }
 			 catch (Exception ^e)
@@ -920,7 +932,7 @@ public static List<language> GetLanguages(int langId)
 				 lblMessage->BackColor = defaultLblBackColor;    
 				 lbProduce->BackColor = defaultTxtBackColor;
 				 errorProvider1->SetError( this->lbProduce, String::Empty);
-				 lblMessage->Text = "";
+				 //lblMessage->Text = "";
 
 			 }
 		 }

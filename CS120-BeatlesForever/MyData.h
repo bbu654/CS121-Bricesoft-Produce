@@ -35,7 +35,7 @@ public:
 public: System::Collections::Specialized::StringCollection^ ReadListBoxFromDB()
 			{
 				lblMessageText->Add("Entering Class MyData!");    //myCol->Add( "* white" );
-				OpenDBConnection(); ReadTable("Products", "productName, productId, unitPrice ,productImage");		
+				OpenDBConnection(); ReadTableProduct("Products", "productName, productId, unitPrice ,productImage");		
 				// Uses the enumerator. 				//void PrintValues2( StringCollection^ myCol ){
 				sc->Add("****End of Products!****");    
 				StringEnumerator^ myEnumerator = lblMessageText->GetEnumerator();
@@ -48,18 +48,18 @@ public: System::Collections::Specialized::StringCollection^ ReadListBoxFromDB()
 			{
 				try
 					{
-						lblMessageText += "Opening Database Connection To MyDb.db ...";	ConnectionNotOpened = false;
+						lblMessageText->Add("Opening Database Connection To MyDb.db ...");	ConnectionNotOpened = false;
 						db->ConnectionString = "Data Source=MyDb.db";
 						db->Open();					   // Open Database Connection
-						lblMessageText += "Database Connection To MyDb.db Opened.\n";
+						lblMessageText->Add("Database Connection To MyDb.db Opened.\n");
 					}
 				catch (Exception ^e)
 					{
-						lblMessageText += "Exception While Opening Sqlite3 Connnection ..." + e->ToString();
+						lblMessageText->Add("Exception While Opening Sqlite3 Connnection ..." + e->ToString());
 					}
  			}
 
-	public: System::Void ReadTable(String^ TableName, String^ FieldNames)		   
+	public: System::Void ReadTableProduct(String^ TableName, String^ FieldNames)		   
 			{
 				String ^strField, ^strField0, ^strField1, ^strField2, ^strField3, ^strLine;
 				// Display Table
@@ -115,14 +115,14 @@ public: System::Collections::Specialized::StringCollection^ ReadListBoxFromDB()
 									break;
 						  }
 				       }					   //lbProduce->Items->Add(strLine);				
-					   sb->AppendLine(strLine);			strLine="";				strField = " ";
+					   sc->Add(strLine);			strLine="";				strField = " ";
 
 				    }
-				    lblMessageText += sb->ToString() + "///SQLite " + TableName;
+				    //lblMessageText->Add(sb->ToString() + "///SQLite " + TableName);
 				 }
 				 catch (Exception ^e)
 				 {                          
-				    lblMessageText += "Exception While Displaying " + TableName + " ..." + e->ToString() ;
+				    lblMessageText->Add("Exception While Displaying " + TableName + " ..." + e->ToString()) ;
 				 }
 
 			}
