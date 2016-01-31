@@ -51,7 +51,7 @@ public: System::Collections::Specialized::StringCollection^ ReadListBoxFromDB()
 						lblMessageText->Add("Opening Database Connection To MyDb.db ...");	ConnectionNotOpened = false;
 						db->ConnectionString = "Data Source=MyDb.db";
 						db->Open();					   // Open Database Connection
-						lblMessageText->Add("Database Connection To MyDb.db Opened.\n");
+						lblMessageText->Add("Database Connection To MyDb.db Opened.");
 					}
 				catch (Exception ^e)
 					{
