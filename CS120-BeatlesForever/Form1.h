@@ -78,7 +78,8 @@ namespace WindowsFormsApplication2012 {
 	private: System::Windows::Forms::PictureBox^  picHead;
 	private: System::Windows::Forms::Label^  lblMessage;
 	private: System::Windows::Forms::ErrorProvider^  errorProvider1;
-	private: System::Windows::Forms::TextBox^  txtPrice;
+	private: System::Windows::Forms::TextBox^  txtAmount;
+
 	private: System::Windows::Forms::TextBox^  txtProductID;
 	private: System::Windows::Forms::Button^  btnLogin;
 
@@ -139,7 +140,7 @@ namespace WindowsFormsApplication2012 {
 			this->picProduce = (gcnew System::Windows::Forms::PictureBox());
 			this->lblMessage = (gcnew System::Windows::Forms::Label());
 			this->errorProvider1 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
-			this->txtPrice = (gcnew System::Windows::Forms::TextBox());
+			this->txtAmount = (gcnew System::Windows::Forms::TextBox());
 			this->txtProductID = (gcnew System::Windows::Forms::TextBox());
 			this->lblID = (gcnew System::Windows::Forms::Label());
 			this->lblPassword = (gcnew System::Windows::Forms::Label());
@@ -155,24 +156,26 @@ namespace WindowsFormsApplication2012 {
 			// lblTitle
 			// 
 			this->lblTitle->AutoSize = true;
-			this->lblTitle->Font = (gcnew System::Drawing::Font(L"Rockwell", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->lblTitle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lblTitle->ForeColor = System::Drawing::Color::DarkTurquoise;
-			this->lblTitle->Location = System::Drawing::Point(181, 17);
+			this->lblTitle->Location = System::Drawing::Point(272, 26);
+			this->lblTitle->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblTitle->Name = L"lblTitle";
-			this->lblTitle->Size = System::Drawing::Size(363, 29);
+			this->lblTitle->Size = System::Drawing::Size(513, 40);
 			this->lblTitle->TabIndex = 0;
 			this->lblTitle->Text = L"Bricesoft Produce Emporeum";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Rockwell", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::SpringGreen;
-			this->label2->Location = System::Drawing::Point(181, 69);
+			this->label2->Location = System::Drawing::Point(272, 106);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(293, 29);
+			this->label2->Size = System::Drawing::Size(459, 40);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"       The FRESHEST Ever";
 			// 
@@ -181,79 +184,89 @@ namespace WindowsFormsApplication2012 {
 			this->groupBox1->Controls->Add(this->picHead);
 			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->Controls->Add(this->lblTitle);
-			this->groupBox1->Location = System::Drawing::Point(10, 7);
+			this->groupBox1->Location = System::Drawing::Point(15, 11);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(647, 130);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->groupBox1->Size = System::Drawing::Size(970, 200);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
 			// 
 			// picHead
 			// 
-			this->picHead->Location = System::Drawing::Point(13, 17);
+			this->picHead->Location = System::Drawing::Point(20, 26);
+			this->picHead->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->picHead->Name = L"picHead";
-			this->picHead->Size = System::Drawing::Size(150, 81);
+			this->picHead->Size = System::Drawing::Size(225, 125);
 			this->picHead->TabIndex = 2;
 			this->picHead->TabStop = false;
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(20, 212);
+			this->label3->Location = System::Drawing::Point(30, 326);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(60, 13);
+			this->label3->Size = System::Drawing::Size(90, 20);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"First Name:";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(20, 246);
+			this->label4->Location = System::Drawing::Point(30, 378);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(61, 13);
+			this->label4->Size = System::Drawing::Size(90, 20);
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"Last Name:";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(20, 279);
+			this->label5->Location = System::Drawing::Point(30, 429);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(30, 13);
+			this->label5->Size = System::Drawing::Size(45, 20);
 			this->label5->TabIndex = 5;
 			this->label5->Text = L"Item:";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(20, 314);
+			this->label6->Location = System::Drawing::Point(30, 483);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(49, 13);
+			this->label6->Size = System::Drawing::Size(72, 20);
 			this->label6->TabIndex = 6;
 			this->label6->Text = L"Quantity:";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(20, 348);
+			this->label7->Location = System::Drawing::Point(30, 535);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(34, 13);
+			this->label7->Size = System::Drawing::Size(48, 20);
 			this->label7->TabIndex = 7;
 			this->label7->Text = L"Price:";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(20, 382);
+			this->label8->Location = System::Drawing::Point(30, 588);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(28, 13);
+			this->label8->Size = System::Drawing::Size(38, 20);
 			this->label8->TabIndex = 8;
 			this->label8->Text = L"Tax:";
 			// 
 			// txtFirstName
 			// 
-			this->txtFirstName->Location = System::Drawing::Point(98, 209);
+			this->txtFirstName->Location = System::Drawing::Point(147, 322);
+			this->txtFirstName->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtFirstName->Name = L"txtFirstName";
-			this->txtFirstName->Size = System::Drawing::Size(100, 20);
+			this->txtFirstName->Size = System::Drawing::Size(148, 26);
 			this->txtFirstName->TabIndex = 9;
 			this->txtFirstName->TextChanged += gcnew System::EventHandler(this, &Form1::txtFirstName_TextChanged);
 			this->txtFirstName->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Form1::txtFirstName_KeyDown);
@@ -262,9 +275,10 @@ namespace WindowsFormsApplication2012 {
 			// 
 			// txtLastName
 			// 
-			this->txtLastName->Location = System::Drawing::Point(98, 243);
+			this->txtLastName->Location = System::Drawing::Point(147, 374);
+			this->txtLastName->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtLastName->Name = L"txtLastName";
-			this->txtLastName->Size = System::Drawing::Size(100, 20);
+			this->txtLastName->Size = System::Drawing::Size(148, 26);
 			this->txtLastName->TabIndex = 10;
 			this->txtLastName->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Form1::txtLastName_KeyDown);
 			this->txtLastName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Form1::txtLastName_KeyPress);
@@ -272,18 +286,20 @@ namespace WindowsFormsApplication2012 {
 			// 
 			// txtItem
 			// 
-			this->txtItem->Location = System::Drawing::Point(98, 277);
+			this->txtItem->Location = System::Drawing::Point(147, 426);
+			this->txtItem->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtItem->Name = L"txtItem";
 			this->txtItem->ReadOnly = true;
-			this->txtItem->Size = System::Drawing::Size(100, 20);
+			this->txtItem->Size = System::Drawing::Size(148, 26);
 			this->txtItem->TabIndex = 11;
 			this->txtItem->TabStop = false;
 			// 
 			// txtQuantity
 			// 
-			this->txtQuantity->Location = System::Drawing::Point(98, 311);
+			this->txtQuantity->Location = System::Drawing::Point(147, 478);
+			this->txtQuantity->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtQuantity->Name = L"txtQuantity";
-			this->txtQuantity->Size = System::Drawing::Size(100, 20);
+			this->txtQuantity->Size = System::Drawing::Size(148, 26);
 			this->txtQuantity->TabIndex = 12;
 			this->txtQuantity->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->txtQuantity->TextChanged += gcnew System::EventHandler(this, &Form1::txtQuantity_TextChanged);
@@ -293,20 +309,22 @@ namespace WindowsFormsApplication2012 {
 			// 
 			// txtItemPrice
 			// 
-			this->txtItemPrice->Location = System::Drawing::Point(98, 345);
+			this->txtItemPrice->Location = System::Drawing::Point(147, 531);
+			this->txtItemPrice->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtItemPrice->Name = L"txtItemPrice";
 			this->txtItemPrice->ReadOnly = true;
-			this->txtItemPrice->Size = System::Drawing::Size(100, 20);
+			this->txtItemPrice->Size = System::Drawing::Size(148, 26);
 			this->txtItemPrice->TabIndex = 13;
 			this->txtItemPrice->TabStop = false;
 			this->txtItemPrice->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// txtTax
 			// 
-			this->txtTax->Location = System::Drawing::Point(98, 379);
+			this->txtTax->Location = System::Drawing::Point(147, 583);
+			this->txtTax->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtTax->Name = L"txtTax";
 			this->txtTax->ReadOnly = true;
-			this->txtTax->Size = System::Drawing::Size(100, 20);
+			this->txtTax->Size = System::Drawing::Size(148, 26);
 			this->txtTax->TabIndex = 14;
 			this->txtTax->TabStop = false;
 			this->txtTax->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -314,18 +332,20 @@ namespace WindowsFormsApplication2012 {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(20, 416);
+			this->label9->Location = System::Drawing::Point(30, 640);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(56, 13);
+			this->label9->Size = System::Drawing::Size(81, 20);
 			this->label9->TabIndex = 15;
 			this->label9->Text = L"Sub Total:";
 			// 
 			// txtSubTotal
 			// 
-			this->txtSubTotal->Location = System::Drawing::Point(98, 413);
+			this->txtSubTotal->Location = System::Drawing::Point(147, 635);
+			this->txtSubTotal->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtSubTotal->Name = L"txtSubTotal";
 			this->txtSubTotal->ReadOnly = true;
-			this->txtSubTotal->Size = System::Drawing::Size(100, 20);
+			this->txtSubTotal->Size = System::Drawing::Size(148, 26);
 			this->txtSubTotal->TabIndex = 16;
 			this->txtSubTotal->TabStop = false;
 			this->txtSubTotal->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -333,18 +353,20 @@ namespace WindowsFormsApplication2012 {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(20, 450);
+			this->label10->Location = System::Drawing::Point(30, 692);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(34, 13);
+			this->label10->Size = System::Drawing::Size(48, 20);
 			this->label10->TabIndex = 17;
 			this->label10->Text = L"Total:";
 			// 
 			// txtTotal
 			// 
-			this->txtTotal->Location = System::Drawing::Point(98, 447);
+			this->txtTotal->Location = System::Drawing::Point(147, 688);
+			this->txtTotal->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtTotal->Name = L"txtTotal";
 			this->txtTotal->ReadOnly = true;
-			this->txtTotal->Size = System::Drawing::Size(100, 20);
+			this->txtTotal->Size = System::Drawing::Size(148, 26);
 			this->txtTotal->TabIndex = 18;
 			this->txtTotal->TabStop = false;
 			this->txtTotal->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -352,18 +374,21 @@ namespace WindowsFormsApplication2012 {
 			// lbProduce
 			// 
 			this->lbProduce->FormattingEnabled = true;
-			this->lbProduce->Location = System::Drawing::Point(385, 190);
+			this->lbProduce->ItemHeight = 20;
+			this->lbProduce->Location = System::Drawing::Point(578, 292);
+			this->lbProduce->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->lbProduce->Name = L"lbProduce";
-			this->lbProduce->Size = System::Drawing::Size(76, 108);
+			this->lbProduce->Size = System::Drawing::Size(112, 164);
 			this->lbProduce->TabIndex = 19;
 			this->lbProduce->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::lbProduce_SelectedIndexChanged);
 			this->lbProduce->Leave += gcnew System::EventHandler(this, &Form1::lbProduce_Leave);
 			// 
 			// btnOK
 			// 
-			this->btnOK->Location = System::Drawing::Point(496, 188);
+			this->btnOK->Location = System::Drawing::Point(744, 289);
+			this->btnOK->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnOK->Name = L"btnOK";
-			this->btnOK->Size = System::Drawing::Size(89, 23);
+			this->btnOK->Size = System::Drawing::Size(134, 35);
 			this->btnOK->TabIndex = 20;
 			this->btnOK->Text = L"Click To &Add";
 			this->btnOK->UseVisualStyleBackColor = true;
@@ -371,9 +396,10 @@ namespace WindowsFormsApplication2012 {
 			// 
 			// btnClear
 			// 
-			this->btnClear->Location = System::Drawing::Point(496, 230);
+			this->btnClear->Location = System::Drawing::Point(744, 354);
+			this->btnClear->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnClear->Name = L"btnClear";
-			this->btnClear->Size = System::Drawing::Size(89, 23);
+			this->btnClear->Size = System::Drawing::Size(134, 35);
 			this->btnClear->TabIndex = 21;
 			this->btnClear->Text = L"&Clear";
 			this->btnClear->UseVisualStyleBackColor = true;
@@ -382,9 +408,10 @@ namespace WindowsFormsApplication2012 {
 			// btnExit
 			// 
 			this->btnExit->DialogResult = System::Windows::Forms::DialogResult::Cancel;
-			this->btnExit->Location = System::Drawing::Point(496, 274);
+			this->btnExit->Location = System::Drawing::Point(744, 422);
+			this->btnExit->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnExit->Name = L"btnExit";
-			this->btnExit->Size = System::Drawing::Size(89, 23);
+			this->btnExit->Size = System::Drawing::Size(134, 35);
 			this->btnExit->TabIndex = 22;
 			this->btnExit->Text = L"E&xit";
 			this->btnExit->UseVisualStyleBackColor = true;
@@ -392,7 +419,8 @@ namespace WindowsFormsApplication2012 {
 			// 
 			// picProduce
 			// 
-			this->picProduce->Location = System::Drawing::Point(496, 335);
+			this->picProduce->Location = System::Drawing::Point(744, 515);
+			this->picProduce->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->picProduce->Name = L"picProduce";
 			this->picProduce->Size = System::Drawing::Size(146, 132);
 			this->picProduce->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -402,32 +430,35 @@ namespace WindowsFormsApplication2012 {
 			// lblMessage
 			// 
 			this->lblMessage->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->lblMessage->Location = System::Drawing::Point(23, 487);
+			this->lblMessage->Location = System::Drawing::Point(34, 749);
+			this->lblMessage->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblMessage->Name = L"lblMessage";
-			this->lblMessage->Size = System::Drawing::Size(619, 150);
+			this->lblMessage->Size = System::Drawing::Size(928, 231);
 			this->lblMessage->TabIndex = 24;
 			// 
 			// errorProvider1
 			// 
 			this->errorProvider1->ContainerControl = this;
 			// 
-			// txtPrice
+			// txtAmount
 			// 
-			this->txtPrice->Location = System::Drawing::Point(385, 338);
-			this->txtPrice->Name = L"txtPrice";
-			this->txtPrice->ReadOnly = true;
-			this->txtPrice->Size = System::Drawing::Size(100, 20);
-			this->txtPrice->TabIndex = 25;
-			this->txtPrice->TabStop = false;
-			this->txtPrice->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->txtPrice->Visible = false;
+			this->txtAmount->Location = System::Drawing::Point(578, 520);
+			this->txtAmount->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txtAmount->Name = L"txtAmount";
+			this->txtAmount->ReadOnly = true;
+			this->txtAmount->Size = System::Drawing::Size(148, 26);
+			this->txtAmount->TabIndex = 25;
+			this->txtAmount->TabStop = false;
+			this->txtAmount->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->txtAmount->Visible = false;
 			// 
 			// txtProductID
 			// 
-			this->txtProductID->Location = System::Drawing::Point(385, 366);
+			this->txtProductID->Location = System::Drawing::Point(578, 563);
+			this->txtProductID->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtProductID->Name = L"txtProductID";
 			this->txtProductID->ReadOnly = true;
-			this->txtProductID->Size = System::Drawing::Size(100, 20);
+			this->txtProductID->Size = System::Drawing::Size(148, 26);
 			this->txtProductID->TabIndex = 26;
 			this->txtProductID->TabStop = false;
 			this->txtProductID->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -436,26 +467,29 @@ namespace WindowsFormsApplication2012 {
 			// lblID
 			// 
 			this->lblID->AutoSize = true;
-			this->lblID->Location = System::Drawing::Point(121, 145);
+			this->lblID->Location = System::Drawing::Point(182, 223);
+			this->lblID->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblID->Name = L"lblID";
-			this->lblID->Size = System::Drawing::Size(79, 13);
+			this->lblID->Size = System::Drawing::Size(119, 20);
 			this->lblID->TabIndex = 27;
 			this->lblID->Text = L"Login Id(Email):";
 			// 
 			// lblPassword
 			// 
 			this->lblPassword->AutoSize = true;
-			this->lblPassword->Location = System::Drawing::Point(329, 145);
+			this->lblPassword->Location = System::Drawing::Point(494, 223);
+			this->lblPassword->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblPassword->Name = L"lblPassword";
-			this->lblPassword->Size = System::Drawing::Size(56, 13);
+			this->lblPassword->Size = System::Drawing::Size(82, 20);
 			this->lblPassword->TabIndex = 29;
 			this->lblPassword->Text = L"Password:";
 			// 
 			// btnLogin
 			// 
-			this->btnLogin->Location = System::Drawing::Point(496, 144);
+			this->btnLogin->Location = System::Drawing::Point(744, 222);
+			this->btnLogin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnLogin->Name = L"btnLogin";
-			this->btnLogin->Size = System::Drawing::Size(89, 23);
+			this->btnLogin->Size = System::Drawing::Size(134, 35);
 			this->btnLogin->TabIndex = 31;
 			this->btnLogin->Text = L"&Login";
 			this->btnLogin->UseVisualStyleBackColor = true;
@@ -463,18 +497,20 @@ namespace WindowsFormsApplication2012 {
 			// 
 			// txtID
 			// 
-			this->txtID->Location = System::Drawing::Point(201, 142);
+			this->txtID->Location = System::Drawing::Point(302, 218);
+			this->txtID->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtID->Name = L"txtID";
-			this->txtID->Size = System::Drawing::Size(100, 20);
+			this->txtID->Size = System::Drawing::Size(148, 26);
 			this->txtID->TabIndex = 32;
 			this->txtID->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Form1::txtID_KeyDown);
 			this->txtID->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Form1::txtID_KeyPress);
 			// 
 			// txtPassword
 			// 
-			this->txtPassword->Location = System::Drawing::Point(385, 142);
+			this->txtPassword->Location = System::Drawing::Point(578, 218);
+			this->txtPassword->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtPassword->Name = L"txtPassword";
-			this->txtPassword->Size = System::Drawing::Size(100, 20);
+			this->txtPassword->Size = System::Drawing::Size(148, 26);
 			this->txtPassword->TabIndex = 33;
 			this->txtPassword->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Form1::txtPassword_KeyDown);
 			this->txtPassword->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Form1::txtPassword_KeyPress);
@@ -482,17 +518,17 @@ namespace WindowsFormsApplication2012 {
 			// Form1
 			// 
 			this->AcceptButton = this->btnOK;
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->CancelButton = this->btnExit;
-			this->ClientSize = System::Drawing::Size(667, 659);
+			this->ClientSize = System::Drawing::Size(1000, 1014);
 			this->Controls->Add(this->txtPassword);
 			this->Controls->Add(this->txtID);
 			this->Controls->Add(this->btnLogin);
 			this->Controls->Add(this->lblPassword);
 			this->Controls->Add(this->lblID);
 			this->Controls->Add(this->txtProductID);
-			this->Controls->Add(this->txtPrice);
+			this->Controls->Add(this->txtAmount);
 			this->Controls->Add(this->lblMessage);
 			this->Controls->Add(this->picProduce);
 			this->Controls->Add(this->btnExit);
@@ -516,6 +552,7 @@ namespace WindowsFormsApplication2012 {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->groupBox1);
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form1";
@@ -534,13 +571,13 @@ namespace WindowsFormsApplication2012 {
 			// need logon with id and password option to logon as guest; same info just not saved
 		static bool ConnectionNotOpened = true;
 		static double tax = .08;					static double total = 0;						static double itemPrice = 0;			
-		static double subTotalAmt = 0;				double price;		double salesTaxAmt;			int quantity;						static int structureCntr = 1; 
+		static double subTotalAmt = 0;				double amount;		double salesTaxAmt;			int quantity;						static int structureCntr = 1; 
 		static System::Drawing::Color defaultTxtBackColor ;		static Color defaultLblBackColor ;		static Color errBackColor = Color::LightGreen; //TODO: Finish below. my head hurts!
 		static SQLiteConnection^ db = gcnew SQLiteConnection();static String^ diskFile = "ProduceListBoxA.txt";static String^ uncleBobFN = "WriteTest.txt";
 		static FileStream^ fileStream = gcnew FileStream(uncleBobFN,FileMode::OpenOrCreate,FileAccess::ReadWrite,FileShare::ReadWrite ); 
 		static String^ strStrucNameA;					String^ MessageTitle;
 		ref struct strucProduce{int iProductID;			String^ sFirstName;			String^ SLastName;			String^ sItem;				String^ sTaxRate;			String^ sItemPrice;			
-								String^ sQuantity;		String^ sPrice;				String^ sSalesTaxAmt;		String^ sSubTotal;			String^ sTotal;}strStrucName;
+								String^ sQuantity;		String^ sAmount;				String^ sSalesTaxAmt;		String^ sSubTotal;			String^ sTotal;}strStrucName;
 		static IsolatedStorageFile^ isoStore = IsolatedStorageFile::GetStore(IsolatedStorageScope::User | IsolatedStorageScope::Assembly, (Type ^)nullptr, (Type ^)nullptr);
 		static UnicodeEncoding^ uniEncoding = gcnew UnicodeEncoding;				static String^ lastRecordText = "The last processed record number was: ";
 		static int textLength = uniEncoding->GetByteCount( lastRecordText );		static int recordNumber = 13;			static int arrayIndex = 0;
@@ -613,20 +650,25 @@ namespace WindowsFormsApplication2012 {
 
 	public: System::Void CalculateSubTotals()
 		 {
-			 if(txtQuantity->Text == String::Empty)								{						txtQuantity->Text = "1";					}
-			 int quantity = Convert::ToInt32(txtQuantity->Text);
-			 txtItemPrice->Text = itemPrice.ToString("C2");
+			 if( !Int32::TryParse(txtQuantity->Text,  quantity))
+			 {
+				txtQuantity->Text = "1";     quantity=1;    
+			 }								 
+			 txtItemPrice->Text = FormatCurrency(itemPrice);
 
-			 double price = quantity * itemPrice;
-			 txtPrice->Text = price.ToString("C2");
+			 double amount = quantity * itemPrice;
+			 txtAmount->Text = FormatCurrency(amount);
 
-			 double salesTaxAmt = tax * price;
-			 txtTax->Text = salesTaxAmt.ToString("C2");
+			 double salesTaxAmt = tax * amount;
+			 txtTax->Text = FormatCurrency(salesTaxAmt);
 
-			 subTotalAmt = price + salesTaxAmt;
-			 txtSubTotal->Text = subTotalAmt.ToString("C2");
+			 subTotalAmt = amount + salesTaxAmt;
+			 txtSubTotal->Text = FormatCurrency(subTotalAmt);
 		 }
-
+public: System::String^ FormatCurrency(double doubleField)
+		{
+			return doubleField.ToString("C2");
+		}
 	public: System::Void CalculateTotals()
 		{
 				 total += subTotalAmt;
@@ -642,7 +684,7 @@ namespace WindowsFormsApplication2012 {
 			 MyArray[arrIx]->sFirstName = txtFirstName->Text->Trim();		MyArray[arrIx]->SLastName = txtLastName->Text->Trim();
 			 MyArray[arrIx]->sItem = txtItem->Text->Trim();					MyArray[arrIx]->sTaxRate = tax.ToString("C2");				
 			 MyArray[arrIx]->sItemPrice = txtItemPrice->Text->Trim();		MyArray[arrIx]->sQuantity = txtQuantity->Text->Trim(); 
-			 MyArray[arrIx]->sPrice = txtPrice->Text->Trim();				MyArray[arrIx]->sSalesTaxAmt = txtTax->Text->Trim(); 
+			 MyArray[arrIx]->sAmount = txtAmount->Text->Trim();				MyArray[arrIx]->sSalesTaxAmt = txtTax->Text->Trim(); 
 			 MyArray[arrIx]->sSubTotal = txtSubTotal->Text->Trim();			MyArray[arrIx]->sTotal = txtTotal->Text->Trim();
 			 arrayIndex++;
 		}
@@ -650,7 +692,7 @@ namespace WindowsFormsApplication2012 {
 	public: System::Void WriteStrucToFile()
 		 {
 			strStrucNameA =		txtProductID->Text->Trim()	+ "," +		txtFirstName->Text->Trim()     + "," +     txtLastName->Text->Trim()     + "," +     txtItem->Text->Trim() 
-					+ "," +     tax.ToString("C2")			+ "," +		txtQuantity->Text->Trim()      + "," +     txtItemPrice->Text->Trim()    + "," +     txtPrice->Text->Trim()
+					+ "," +     tax.ToString("C2")			+ "," +		txtQuantity->Text->Trim()      + "," +     txtItemPrice->Text->Trim()    + "," +     txtAmount->Text->Trim()
 					+ "," +		txtTax->Text->Trim()		+ "," +		txtSubTotal->Text->Trim()	   + "," +	   txtTotal->Text->Trim()		 + "\n";
 			byteCount = uniEncoding->GetByteCount( strStrucNameA );   structureCntr++;				   //  		   fileStream->Write( uniEncoding->GetBytes( strStrucName.ToString() ), 0, byteCount );
 			fileStream->Write( uniEncoding->GetBytes( strStrucNameA), 0, byteCount );
@@ -908,7 +950,7 @@ public static List<language> GetLanguages(int langId)
 
 	private: System::Void btnClear_Click(System::Object^  sender, System::EventArgs^  e) 
 		 {
-			 txtFirstName->Text = ""; txtLastName->Text = ""; txtItem->Text = ""; txtPrice->Text = ""; txtQuantity->Text = ""; txtSubTotal->Text =""; txtTax->Text = ""; txtTotal->Text = "";
+			 txtFirstName->Text = ""; txtLastName->Text = ""; txtItem->Text = ""; txtAmount->Text = ""; txtQuantity->Text = ""; txtSubTotal->Text =""; txtTax->Text = ""; txtTotal->Text = "";
 			 lbProduce->SelectedIndex = -1;
 		 }
 
@@ -927,6 +969,7 @@ public static List<language> GetLanguages(int langId)
 				 itemPrice = Convert::ToDouble(lbProduce->SelectedItem->ToString()->Substring(30,10)->Trim());
 				 String^ strImage = lbProduce->SelectedItem->ToString()->Substring(40)->Trim();
 				 picProduce->Load(strImage);
+				 //txtItemPrice->Text = itemPrice.ToString("C2");	`	See CalculateSubTotals();
 				 CalculateSubTotals();
 				 lblMessage->BackColor = defaultLblBackColor;    
 				 lbProduce->BackColor = defaultTxtBackColor;
